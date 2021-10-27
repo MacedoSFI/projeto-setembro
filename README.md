@@ -1,5 +1,9 @@
 # ProjetoSetembro
 
+https://www.youtube.com/hashtag/crudangularspring curso da Loiane Groner. 
+mais curso da Alura Angular parte 2: Autenticação, Forms e lazy loading
+Para integrar ao back end do memu projeto https://setembro21.herokuapp.com/setembro21
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
 ## Development server
