@@ -2,8 +2,8 @@
   <mat-card-header>
     <mat-card-title>Login</mat-card-title>
   </mat-card-header>
-  <mat-card-content>
-    <div class="form-group">
+  <mat-card-content >
+    <form [formGroup]="loginForm" (submit)="login()">
       <mat-form-field appearance="fill">
         <mat-label>digite seu e-mail</mat-label>
         <input
@@ -17,7 +17,7 @@
       <br />
       <mat-form-field appearance="fill">
         <mat-label>informe a senha</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" />
+        <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" />
         <button
           mat-icon-button
           matSuffix
@@ -27,11 +27,12 @@
         >
           <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
         </button>
+        <mat-error *ngIf="password.invalid">{{ getErrorMessagePassword() }}</mat-error>
       </mat-form-field>
       <mat-card-actions align="start">
         <button mat-stroked-button color="primary">Entrar</button>
       </mat-card-actions>
-    </div>
+    </form>
   </mat-card-content>
 
   <mat-card-footer> Novo usuário?<a>CADASTRE-SE</a> </mat-card-footer>
